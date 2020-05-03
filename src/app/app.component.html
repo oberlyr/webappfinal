@@ -1,0 +1,17 @@
+<h1 align="center">{{title}}</h1>
+<div class="navbar">
+	<a routerLink="/dashboard">Dashboard</a>
+	<div class="dropdown">
+		<button class="dropbtn">Forms
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a routerLink="/open-date-change-request">Open Date Change Form</a>
+	    <a routerLink="/sign-order">Sign Order Form</a>
+	    <a routerLink="/fixture-order">Fixture Order Form</a>
+      <a routerLink="/sku-order">Sku Order Form</a>
+	    <a routerLink="/printer-request">Printer Request Form</a>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

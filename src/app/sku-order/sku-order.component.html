@@ -1,0 +1,154 @@
+<body>
+	<div>
+		<h2 align="center">Sku Order Form</h2>
+	</div>
+	<div align="center" class="form">
+		<label>Store Number
+    <select name="StoreNumber">
+      <option value= "Default" selected="selected">Select Store</option>
+      <option value= "60020">60020</option>
+      <option value= "60123">60123</option>
+      <option value= "60456">60456</option>
+      <option value= "60789">60789</option>
+      <option value= "60147">60147</option>
+      <option value= "60258">60258</option>
+      <option value= "60369">60369</option>
+      <option value= "60987">60987</option>
+      <option value= "60654">60654</option>
+      <option value= "60321">60321</option>
+    </select>
+  </label>
+		<div>
+			<h4></h4>
+		</div>
+		<label>Contact Name
+    <input #contactName/>
+  </label>
+		<div>
+			<h4></h4>
+		</div>
+		<label>Email
+    <input #email/>
+  </label>
+		<div>
+			<h4></h4>
+		</div>
+		<label>Order Date
+    <input #date/>
+  </label>
+		<div>
+			<h4></h4>
+		</div>
+	</div>
+	<p id="date"></p>
+	<div>
+		<h3></h3>
+	</div>
+	<table>
+		<col width="50">
+		<col width="220">
+		<col width="30">
+		<col width="10">
+		<col width="20">
+		<col width="20">
+		<col width="20">
+		<col width="60">
+		<col width="20">
+		<col width="30">
+		<col width="30">
+		<col width="70">
+		<col width="10">
+		<thead>
+			<tr>
+				<th>Sku</th>
+				<th>Description</th>
+				<th>Dept</th>
+				<th>Class</th>
+				<th>On Hand</th>
+				<th>Sales</th>
+				<th>Damaged</th>
+				<th>In Transit</th>
+				<th>Freeze</th>
+				<th>Pending Req Qty</th>
+				<th>Qty</th>
+				<th>Reason</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let field of fieldArray; let i = index">
+				<td>
+					<input size="10" [(ngModel)]="field.sku" class="form-control" type="text" name="{{field.sku}}" />
+            </td>
+				<td>
+					{{data1[0]}}
+				</td>
+				<td>
+					{{data1[1]}}
+				</td>
+				<td>
+					{{data1[2]}}
+				</td>
+				<td>
+					{{data1[3]}}
+				</td>
+				<td>
+					{{data1[4]}}
+				</td>
+				<td>
+					{{data1[5]}}
+				</td>
+				<td>
+					{{data1[6]}}
+				</td>
+				<td>
+					{{data1[7]}}
+				</td>
+				<td>
+					{{data1[8]}}
+				</td>
+				<td>
+					<input size="1" [(ngModel)]="field.qty" class="form-control" type="text" name="{{field.qty}}" />
+            </td>
+				<td>
+					<input size="10" [(ngModel)]="field.reason" class="form-control" type="text" name="{{field.reason}}" />
+            </td>
+				<td>
+					<button class="btn btn-default"  type="button" (click)="deleteFieldValue(i)">Delete</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input size="10" class="form-control" type="text" id="newAttributeSku" [(ngModel)]="newAttribute.sku" name="newAttributeSku" />
+        </td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>
+					<input size="1" class="form-control" type="text" id="newAttributeQty" [(ngModel)]="newAttribute.qty" name="newAttributeQty" />
+        </td>
+				<td>
+					<input size="10" class="form-control" type="text" id="newAttributeReason" [(ngModel)]="newAttribute.reason" name="newAttributeReason" />
+        </td>
+				<td>
+					<button class="btn btn-default" type="button" (click)="addFieldValue()">Add</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="bottom">
+		<h3>{{errorMessage}}</h3>
+	</div>
+	<div>
+		<h4></h4>
+	</div>
+	<div align="center">
+		<button (click)="add(heroName.value, heroLink.value); heroName.value=''; heroLink.value=''">Submit Request</button>
+	</div>
+</body>

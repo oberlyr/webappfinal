@@ -1,0 +1,62 @@
+<body>
+	<div>
+		<h2 align="center">Open Date Change Request Form</h2>
+		<div class="form">
+			<label>Store Number
+    <select name="StoreNumber">
+      <option value= "Default" selected="selected">Select Store</option>
+      <option value= "60020">60020</option>
+      <option value= "60123">60123</option>
+      <option value= "60456">60456</option>
+      <option value= "60789">60789</option>
+      <option value= "60147">60147</option>
+      <option value= "60258">60258</option>
+      <option value= "60369">60369</option>
+      <option value= "60987">60987</option>
+      <option value= "60654">60654</option>
+      <option value= "60321">60321</option>
+    </select>
+  </label>
+			<div>
+				<h4></h4>
+			</div>
+			<label>Planned Open Date
+    <input #plannedDate/>
+  </label>
+			<div>
+				<h4></h4>
+			</div>
+			<label>New Open Date
+    <input #newDate/>
+  </label>
+			<div>
+				<h4></h4>
+			</div>
+			<label>Open Date Change Reason
+    <select name="OpenDateReasonCode">
+      <option value= "Default" selected="selected"></option>
+      <option value= "1">Ready to Open</option>
+      <option value= "2">Waiting for Keys</option>
+      <option value= "3">Waiting for Inspection</option>
+      <option value= "4">Landlord Negotiation</option>
+      <option value= "5">Cancelled</option>
+    </select>
+  </label>
+			<div>
+				<h3></h3>
+			</div>
+			<label> Additional Comments
+    <textarea></textarea>
+  </label>
+			<div>
+				<h4></h4>
+			</div>
+			<div>
+				<h4>&nbsp;</h4>
+			</div>
+		</div>
+		<div align="center">
+			<button (click)="add(heroName.value, heroLink.value); heroName.value=''; heroLink.value=''">Submit Request</button>
+		</div>
+	</div>
+</body>
