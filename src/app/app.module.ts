@@ -10,7 +10,6 @@ import { PrinterRequestComponent } from './printer-request/printer-request.compo
 import { SignOrderComponent } from './sign-order/sign-order.component';
 import { FixtureOrderComponent } from './fixture-order/fixture-order.component';
 import { SkuOrderComponent } from './sku-order/sku-order.component';
-import { OpenDateChangeRequestComponent } from './open-date-change-request/open-date-change-request.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +18,7 @@ import { OpenDateChangeRequestComponent } from './open-date-change-request/open-
     PrinterRequestComponent,
     SignOrderComponent,
     FixtureOrderComponent,
-    SkuOrderComponent,
-    OpenDateChangeRequestComponent
+    SkuOrderComponent
   ],
   imports: [
     BrowserModule,

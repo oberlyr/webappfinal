@@ -35,10 +35,11 @@ div{
 
 h3{
   font-size: 1.2em;
-  color: #3a628d;
+  /*color: #3a628d;*/
   font-weight: bold;
-  background-color: rgb(175, 175, 175);
-  padding: 5px;
+  /*background-color: rgb(175, 175, 175);
+  padding: 5px;*/
+  text-align: center;
 }
 
 label{
