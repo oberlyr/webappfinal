@@ -10,6 +10,7 @@ import { PrinterRequestComponent } from './printer-request/printer-request.compo
 import { SignOrderComponent } from './sign-order/sign-order.component';
 import { FixtureOrderComponent } from './fixture-order/fixture-order.component';
 import { SkuOrderComponent } from './sku-order/sku-order.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SkuOrderComponent } from './sku-order/sku-order.component';
     PrinterRequestComponent,
     SignOrderComponent,
     FixtureOrderComponent,
-    SkuOrderComponent
+    SkuOrderComponent,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,

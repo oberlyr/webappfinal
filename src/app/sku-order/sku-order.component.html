@@ -2,44 +2,6 @@
 	<div>
 		<h2 align="center">Sku Order Form</h2>
 	</div>
-	<div align="center" class="form">
-		<label>Store Number
-    <select name="StoreNumber">
-      <option value= "Default" selected="selected">Select Store</option>
-      <option value= "60020">60020</option>
-      <option value= "60123">60123</option>
-      <option value= "60456">60456</option>
-      <option value= "60789">60789</option>
-      <option value= "60147">60147</option>
-      <option value= "60258">60258</option>
-      <option value= "60369">60369</option>
-      <option value= "60987">60987</option>
-      <option value= "60654">60654</option>
-      <option value= "60321">60321</option>
-    </select>
-  </label>
-		<div>
-			<h4></h4>
-		</div>
-		<label>Contact Name
-    <input #contactName/>
-  </label>
-		<div>
-			<h4></h4>
-		</div>
-		<label>Email
-    <input #email/>
-  </label>
-		<div>
-			<h4></h4>
-		</div>
-		<label>Order Date
-    <input #date/>
-  </label>
-		<div>
-			<h4></h4>
-		</div>
-	</div>
 	<p id="date"></p>
 	<div>
 		<h3></h3>
@@ -64,12 +26,12 @@
 				<th>Description</th>
 				<th>Dept</th>
 				<th>Class</th>
-				<th>On Hand</th>
-				<th>Sales</th>
+				<th>In Warehouse</th>
+				<th>Price</th>
 				<th>Damaged</th>
 				<th>In Transit</th>
-				<th>Freeze</th>
-				<th>Pending Req Qty</th>
+				<th>Capacity</th>
+				<th>Store Inv</th>
 				<th>Qty</th>
 				<th>Reason</th>
 				<th></th>
@@ -81,31 +43,31 @@
 					<input size="10" [(ngModel)]="field.sku" class="form-control" type="text" name="{{field.sku}}" />
             </td>
 				<td>
-					{{data1[0]}}
+					{{field.desc}}
 				</td>
 				<td>
-					{{data1[1]}}
+					{{field.dept}}
 				</td>
 				<td>
-					{{data1[2]}}
+					{{field.clas}}
 				</td>
 				<td>
-					{{data1[3]}}
+					{{field.warehouse}}
 				</td>
 				<td>
-					{{data1[4]}}
+					{{field.price}}
 				</td>
 				<td>
-					{{data1[5]}}
+					{{field.damaged}}
 				</td>
 				<td>
-					{{data1[6]}}
+					{{field.transit}}
 				</td>
 				<td>
-					{{data1[7]}}
+					{{field.capacity}}
 				</td>
 				<td>
-					{{data1[8]}}
+					{{field.storeInv}}
 				</td>
 				<td>
 					<input size="1" [(ngModel)]="field.qty" class="form-control" type="text" name="{{field.qty}}" />
@@ -147,6 +109,143 @@
 	</div>
 	<div>
 		<h4></h4>
+	</div>
+  <h4 align="center">Store Information</h4>
+	<div align="center" class="form">
+		<label>Store Number
+    <select name="StoreNumber">
+      <option value= "Default" selected="selected">Select Store</option>
+      <option value= "60020">60020</option>
+      <option value= "60123">60123</option>
+      <option value= "60456">60456</option>
+      <option value= "60789">60789</option>
+      <option value= "60147">60147</option>
+      <option value= "60258">60258</option>
+      <option value= "60369">60369</option>
+      <option value= "60987">60987</option>
+      <option value= "60654">60654</option>
+      <option value= "60321">60321</option>
+    </select>
+  </label>
+		<div>
+			<h4></h4>
+		</div>
+		<label>Contact Name
+    <input #contactName/>
+  </label>
+		<div>
+			<h4></h4>
+		</div>
+		<label>Phone Number
+    <input #phoneNum/>
+  </label>
+		<div>
+			<h4></h4>
+		</div>
+		<label>Email Address
+    <input #email/>
+  </label>
+		<div>
+			<h4></h4>
+		</div>
+	</div>
+	<h4 align="center">Shipping Information</h4>
+	<div class="form">
+		<label>Address 1
+    <input #address1/>
+  </label>
+		<div>
+			<h4></h4>
+		</div>
+		<label>Address 2
+    <input #address2/>
+  </label>
+		<div>
+			<h4></h4>
+		</div>
+		<label>City
+    <input #city/>
+  </label>
+		<div>
+			<h4></h4>
+		</div>
+		<label>State
+    <select name="State">
+      <option value= "Default" selected="selected">Select State</option>
+      <option value= "Alabama">Alabama</option>
+      <option value= "Alaska">Alaska</option>
+      <option value= "Arizona">Arizona</option>
+      <option value= "Arkansas">Arkansas</option>
+      <option value= "California">California</option>
+      <option value= "Colorado">Colorado</option>
+      <option value= "Connecticut">Connecticut</option>
+      <option value= "Delaware">Delaware</option>
+      <option value= "Florida">Florida</option>
+      <option value= "Georgia">Georgia</option>
+      <option value= "Hawaii">Hawaii</option>
+      <option value= "Idaho">Idaho</option>
+      <option value= "Illinois">Illinois</option>
+      <option value= "Indiana">Indiana</option>
+      <option value= "Iowa">Iowa</option>
+      <option value= "Kansas">Kansas</option>
+      <option value= "Kentucky">Kentucky</option>
+      <option value= "Louisiana">Louisiana</option>
+      <option value= "Maine">Maine</option>
+      <option value= "Maryland">Maryland</option>
+      <option value= "Massachusetts">Massachusetts</option>
+      <option value= "Michigan">Michigan</option>
+      <option value= "Minnesota">Minnesota</option>
+      <option value= "Mississippi">Mississippi</option>
+      <option value= "Missouri">Missouri</option>
+      <option value= "Montana">Montana</option>
+      <option value= "Nebraska">Nebraska</option>
+      <option value= "Nevada">Nevada</option>
+      <option value= "New Hampshire">New Hampshire</option>
+      <option value= "New Jersey">New Jersey</option>
+      <option value= "New Mexico">New Mexico</option>
+      <option value= "New York">New York</option>
+      <option value= "North Carolina">North Carolina</option>
+      <option value= "North Dakota">North Dakota</option>
+      <option value= "Ohio">Ohio</option>
+      <option value= "Oklahoma">Oklahoma</option>
+      <option value= "Oregon">Oregon</option>
+      <option value= "Pennsylvania">Pennsylvania</option>
+      <option value= "Rhode Island">Rhode Island</option>
+      <option value= "South Carolina">South Carolina</option>
+      <option value= "South Dakota">South Dakota</option>
+      <option value= "Tennessee">Tennessee</option>
+      <option value= "Texas">Texas</option>
+      <option value= "Utah">Utah</option>
+      <option value= "Vermont">Vermont</option>
+      <option value= "Virginia">Virginia</option>
+      <option value= "Washington">Washington</option>
+      <option value= "West Virginia">West Virginia</option>
+      <option value= "Wisconsin">Wisconsin</option>
+      <option value= "Wyoming">Wyoming</option>
+    </select>
+  </label>
+		<div>
+			<h4></h4>
+		</div>
+		<label>Zip
+    <input #zip/>
+  </label>
+		<div>
+			<h4></h4>
+		</div>
+	</div>
+	<div class="form2">
+		<label>Shipping Method
+    <select name="ShippingMethod" width="20em">
+      <option value= "Default" selected="selected">Choose a Shipping Method...</option>
+      <option value= "USPS">USPS</option>
+      <option value= "UPS">UPS</option>
+      <option value= "FedEx">FedEx</option>
+    </select>
+  </label>
+		<div>
+			<h4></h4>
+		</div>
 	</div>
 	<div align="center">
 		<button onClick="window.location.reload();">Submit Request</button>
