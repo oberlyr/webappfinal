@@ -29,14 +29,14 @@ export class SkuOrderComponent implements OnInit {
       this.errorMessage = "You must enter a quantity.";
       return;
     }
-    else if (this.newAttribute.reason == null) {
-      this.errorMessage = "You must enter a reason.";
+    else if (this.newAttribute.date == null) {
+      this.errorMessage = "You must enter a requested delivery date.";
       return;
     }
     else {
       this.errorMessage = "";
 
-      if(this.fieldArray.length == 0)
+      if(this.newAttribute.sku == 45)
       {
         this.newAttribute.desc = data1[0];
         this.newAttribute.dept = data1[1];
@@ -49,7 +49,7 @@ export class SkuOrderComponent implements OnInit {
         this.newAttribute.storeInv = data1[8];
         this.fieldArray.push(this.newAttribute)
       }
-      else if(this.fieldArray.length == 1)
+      else if(this.newAttribute.sku == 321)
       {
         this.newAttribute.desc = data2[0];
         this.newAttribute.dept = data2[1];
@@ -62,7 +62,7 @@ export class SkuOrderComponent implements OnInit {
         this.newAttribute.storeInv = data2[8];
         this.fieldArray.push(this.newAttribute)
       }
-      else if(this.fieldArray.length == 2)
+      else if(this.newAttribute.sku == 777)
       {
         this.newAttribute.desc = data3[0];
         this.newAttribute.dept = data3[1];
@@ -75,7 +75,7 @@ export class SkuOrderComponent implements OnInit {
         this.newAttribute.storeInv = data3[8];
         this.fieldArray.push(this.newAttribute)
       }
-      else if(this.fieldArray.length == 3)
+      else if(this.newAttribute.sku == 256)
       {
         this.newAttribute.desc = data4[0];
         this.newAttribute.dept = data4[1];
@@ -87,6 +87,12 @@ export class SkuOrderComponent implements OnInit {
         this.newAttribute.capacity = data4[7];
         this.newAttribute.storeInv = data4[8];
         this.fieldArray.push(this.newAttribute)
+      }
+      else
+      {
+        this.errorMessage = "Sku not found.";
+        this.newAttribute = {};
+        return;
       }
       this.newAttribute = {};
     }
